@@ -158,7 +158,7 @@ async function run() {
        res.send(result)
     })
 
-    
+
 
     app.delete("/events/:id",verifyFirebaseToken,async(req , res)=>{
       const id = req.params.id ;
@@ -184,6 +184,7 @@ async function run() {
     })
 
 
+    
   
     
     // await client.db("admin").command({ ping: 1 });
