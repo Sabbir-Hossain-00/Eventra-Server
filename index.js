@@ -126,7 +126,7 @@ async function run() {
       res.send(result);
     });
 
-    
+
     app.get("/upcomingEventsByTitle", async(req , res)=>{
       const title = req.query.title ;
       const query = {
@@ -142,8 +142,8 @@ async function run() {
         const result = await eventCollection.insertOne(doc);
         res.send(result);
     });
-
     
+
 
     app.put("/events/:id", verifyFirebaseToken , async(req , res)=>{
       const id = req.params.id ;
@@ -158,6 +158,7 @@ async function run() {
        res.send(result)
     })
 
+    
 
     app.delete("/events/:id",verifyFirebaseToken,async(req , res)=>{
       const id = req.params.id ;
