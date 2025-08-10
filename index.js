@@ -109,6 +109,7 @@ async function run() {
         res.send(result)
     });
 
+    
     app.get("/manageEvents",verifyFirebaseToken, verifyTokenEmail, async(req , res)=>{
         const email = req.query.email ;
         const query = {userEmail : email};
