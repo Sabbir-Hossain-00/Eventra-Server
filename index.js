@@ -109,7 +109,7 @@ async function run() {
         res.send(result)
     });
 
-    
+
     app.get("/manageEvents",verifyFirebaseToken, verifyTokenEmail, async(req , res)=>{
         const email = req.query.email ;
         const query = {userEmail : email};
@@ -126,6 +126,7 @@ async function run() {
       res.send(result);
     });
 
+    
     app.get("/upcomingEventsByTitle", async(req , res)=>{
       const title = req.query.title ;
       const query = {
