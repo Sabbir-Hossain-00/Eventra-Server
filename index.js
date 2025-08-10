@@ -177,8 +177,6 @@ async function run() {
     })
 
 
-
-    
     app.post("/joinedEvents",verifyFirebaseToken,async(req , res)=>{
       const doc = req.body ;
       const result = await joinedEventCollection.insertOne(doc);
