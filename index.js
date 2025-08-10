@@ -101,7 +101,6 @@ async function run() {
       const result = await eventCollection.find().toArray() || {};
       res.send(result)
     })
-   
 
     app.get("/eventDetails/:id",verifyFirebaseToken,async(req , res)=>{
         const id = req.params.id ;
